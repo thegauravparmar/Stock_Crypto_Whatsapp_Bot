@@ -12,3 +12,28 @@ Details of the files:
 
 
 Soon the details to run the bot will be added
+
+Set Up the bot:
+
+1. Install Virtual Enviroment
+```pip install virtualenv```
+2. Install all the dependencies
+    ```pip install twilio```
+    ```pip install flask```
+    ```pip install requests```
+3. Set requirements.txt file
+    ```pip freeze > requirements.txt```
+
+
+How to Start
+
+1. Open Bash
+2. Use command
+```Source venv/Scripts/activate```
+3. Start
+    ```export FLASK_APP=app.py```
+4. Export the Keys
+    ```export TWILIO_ACCOUNT=AC1456f1794c1d1d2846f997f842fdc094```
+    ```export TWILIO_TOKEN=7096a0fe331ddf2da774a9847bea9628```
+    ```export MARKETSTACK_KEY=d5a5825c280a0ab2ad1761dcbde60e89```
+
