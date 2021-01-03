@@ -29,7 +29,7 @@ How to Start
 
 1. Open Bash
 2. Use command
-```Source venv/Scripts/activate```
+```. venv/Scripts/activate```
 3. Start
     ```export FLASK_APP=app.py```
 4. Export the Keys

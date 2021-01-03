@@ -21,7 +21,7 @@ def send_msg(msg, recipient):
     )
 
 
-stockarray = ["AXISBANK", "BAJAJ-AUTO", "BAJAJFINSV", "BAJFINANCE", "BHARTIARTL", "BRITANNIA", "CIPLA", "HDFC", "HDFCBANK",
+stockarray = ["AXISBANK", "BAJAJAUTO", "BAJAJFINSV", "BAJFINANCE", "BHARTIARTL", "BRITANNIA", "CIPLA", "HDFC", "HDFCBANK",
               "ICICIBANK", "ITC", "KOTAKBANK", "ONGC", "RELIANCE", "SBIN", "SUNPHARMA", "TATAMOTORS", "TATASTEEL", "TCS", "WIPRO"]
 
 
@@ -39,7 +39,7 @@ def process_msg(msg):  # default function to send all the responses
         last_price_str = str(last_price)
         response = "The Stock Pirce of " + stock_symbol + " is: $" + last_price_str
     elif msg == "PREDICTION":
-        response = "Select the required stock from below for prediction. \n Eg. Type '1' for AXISBANK \n\n 1.AXISBANK \n 2.BAJAJ-AUTO \n 3.BAJAJFINSV \n 4.BAJFINANCE \n 5.BHARTIARTL \n 6.BRITANNIA \n 7.CIPLA \n 8.HDFC \n 9.HDFCBANK \n 10.ICICIBANK \n 11.ITC \n 12.KOTAKBANK \n 13.ONGC \n 14.RELIANCE \n 15.SBIN \n 16.SUNPHARMA \n 17.TATAMOTORS \n 18.TATASTEEL \n 19.TCS \n 20.WIPRO"
+        response = "Select the required stock from below for prediction. \n Eg. Type '1' for AXISBANK \n\n 1. AXISBANK \n 2. BAJAJ-AUTO \n 3. BAJAJFINSV \n 4. BAJFINANCE \n 5. BHARTIARTL \n 6. BRITANNIA \n 7. CIPLA \n 8. HDFC \n 9. HDFCBANK \n 10. ICICIBANK \n 11. ITC \n 12. KOTAKBANK \n 13. ONGC \n 14. RELIANCE \n 15. SBIN \n 16. SUNPHARMA \n 17. TATAMOTORS \n 18. TATASTEEL \n 19. TCS \n 20. WIPRO"
     elif msg == "1":
         response = prediction_stock(stockarray[0])
     elif msg == "2":

@@ -1,8 +1,6 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
-import string
 
 
 def prediction_stock(predstock):
@@ -16,53 +14,27 @@ def prediction_stock(predstock):
         col = []
         for j in range(cols):
             col.append(i+1)
-        X.append(col)
+        X.append(col)  # creates a 2D array of digits (1 to 200)
     # print(X)
-
-    # num = pd.read_csv(
-    #     "F:/My Projects/Stock Market Chat Box Python/dataset/test.csv")
 
     y = dataset.iloc[-201:-1, 8].values
-    # print(X)
+
     # print(y)
-    lin_reg = LinearRegression()
-    lin_reg.fit(X, y)
+    # creates polinomial relation between x and y with degree 4 ( for best results)
     poly_reg = PolynomialFeatures(degree=4)
     X_poly = poly_reg.fit_transform(X)
+    # creats object of imported LinearRegression function.
     lin_reg_2 = LinearRegression()
     lin_reg_2.fit(X_poly, y)
 
-    ################################################################################
-    # plt.scatter(X, y, color='red')
-    # plt.plot(X, lin_reg_2.predict(poly_reg.fit_transform(X)), color='blue')
-    # plt.title('Median Graph of previous Days (not to scale, just a prediction)')
-    # plt.xlabel('Days')
-    # plt.ylabel('Price Variation')
-    # plt.show()
-    ################################################################################
-
-    # stock_pred_array = {str(lin_reg_2.predict(poly_reg.fit_transform([[201]]))), str(
-    #     lin_reg_2.predict(poly_reg.fit_transform([[202]])))}
-
-    # print(stock_pred_array)
-    stock_pred_array2 = "Tomorrow's Predicted Value of " + stock_name + " is: " + \
+    stock_pred_string = "Tomorrow's Predicted Value of " + stock_name + " is: " + \
         str(lin_reg_2.predict(poly_reg.fit_transform([[201]]))) + "\n" + "Day After Tomorrow's Predicted Value of " + \
         stock_name + " is: " + \
-        str(lin_reg_2.predict(poly_reg.fit_transform([[202]]))) + "\n"
-
-    ################################################################################
-    # predicting for day 21 and 22
-    # print("Today expected Close : ", end=" ")
-    # print(str(lin_reg_2.predict(poly_reg.fit_transform([[201]]))))
-    # if []
-    # print("Tomorrow expected Close : ", end=" ")
-    # print(lin_reg_2.predict(poly_reg.fit_transform([[202]])))
-    # stores the data in json_result variable
-    # json_result2 = json.loads(stock_pred_array)
-    ################################################################################
+        str(lin_reg_2.predict(poly_reg.fit_transform([[202]]))) + \
+        "\n"  # this string concatinates the stock name and then predicted value.
 
     # print(stock_pred_array2)
 
     return{
-        stock_pred_array2  # return the array of predicted stocks
+        stock_pred_string  # return the string of predicted stocks data
     }
