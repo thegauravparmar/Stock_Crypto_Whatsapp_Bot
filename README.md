@@ -1,4 +1,4 @@
-StockMarket_Whatsapp_ChatBot_Python ( Crypto Will be added in Newer Version )
+Stock_Crypto_Whatsapp_Bot ( Crypto Added )
 
 
 Details of the files:
