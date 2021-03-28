@@ -1,4 +1,4 @@
-# MARKETSTACK_KEY=d5a5825c280a0ab2ad1761dcbde60e89
+# MARKETSTACK_KEY=#####
 
 # imports
 import os  # to access environment variable
@@ -31,4 +31,4 @@ def get_stock_price(stock_symbol):
 
 # sample post request
 
-# http://api.marketstack.com/v1/tickers/AMZN/intraday/latest?access_key=d5a5825c280a0ab2ad1761dcbde60e89
+# http://api.marketstack.com/v1/tickers/AMZN/intraday/latest?access_key=#####
