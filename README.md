@@ -33,7 +33,7 @@ How to Start
 3. Start
     ```export FLASK_APP=app.py```
 4. Export the Keys
-    ```export TWILIO_ACCOUNT=AC1456f1794c1d1d2846f997f842fdc094```
-    ```export TWILIO_TOKEN=7096a0fe331ddf2da774a9847bea9628```
-    ```export MARKETSTACK_KEY=d5a5825c280a0ab2ad1761dcbde60e89```
+    ```export TWILIO_ACCOUNT=###```
+    ```export TWILIO_TOKEN=###```
+    ```export MARKETSTACK_KEY=###```
 
